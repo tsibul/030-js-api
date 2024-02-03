@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: #EFE7DC;
+  color: #151E19;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.schedule {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 2fr 2fr repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.schedule__header {
+  background-color: #DFCFB9;
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.schedule__item {
+  font-weight: inherit;
+  background-color: inherit;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn__save {
+  background-color: #293D32;
+  color: #EFE7DC;
+  border: 1px solid #293D32;
+}
+.btn__save:hover {
+  background-color: #EFE7DC;
+  color: #293D32;
+}
+.btn__cancel {
+  background-color: #86A0AC;
+  color: #EFE7DC;
+  border: 1px solid #86A0AC;
+}
+.btn__cancel:hover {
+  background-color: #EFE7DC;
+  color: #86A0AC;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: auto;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=style.css.map */

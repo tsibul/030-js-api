@@ -1,0 +1,79 @@
+@import "vars";
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: $colorSecondary100;
+  color: $colorPrimary900;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+.schedule {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 2fr 2fr repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+
+  &__header {
+    background-color: $colorSecondary200;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+
+  &__item {
+    font-weight: inherit;
+    background-color: inherit;
+  }
+
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &__save {
+    background-color: $colorPrimary800;
+    color: $colorSecondary100;
+    border: 1px solid $colorPrimary800;
+
+    &:hover {
+      background-color: $colorSecondary100;
+      color: $colorPrimary800;
+    }
+  }
+
+  &__cancel {
+    background-color: $colorNeutral400;
+    color: $colorSecondary100;
+    border: 1px solid $colorNeutral400;
+
+    &:hover {
+      background-color: $colorSecondary100;
+      color: $colorNeutral400;
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: auto;
+  pointer-events: none;
+}
+

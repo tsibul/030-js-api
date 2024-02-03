@@ -1,0 +1,7 @@
+/package.json
+/package-lock.json
+/node_modules/.package-lock.json
+/.idea/jsLibraryMappings.xml
+/node_modules/fs/package.json
+/.idea/watcherTasks.xml
+/node_modules/fs/README.md
