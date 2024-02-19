@@ -1,0 +1,66 @@
+@import 'vars';
+@import 'mixins';
+.featured {
+    margin-bottom: 63px;
+}
+
+.catalog {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, 360px);
+}
+
+.item {
+    position: relative;
+    display: block;
+    background-color: $colorPrimary100;
+    text-decoration: none;
+    max-height: 581px;
+    &:hover .item-shadow {
+        z-index: 1;
+    }
+    &-shadow {
+        @include d-flex-center(center);
+        position: absolute;
+        height: 420px;
+        width: 360px;
+        background-color: rgba(58, 56, 56, 0.7);
+        z-index: -1;
+    }
+    &-name {
+        text-align: left;
+        color: $colorPrimary900;
+        @include text-normal(13px);
+        padding-bottom: 13px;
+        padding-top: 23.5px;
+        padding-left: 18px;
+    }
+    &-description {
+        text-align: left;
+        color: $colorPrimary600;
+        @include text-thin(14px);
+        padding-bottom: 18px;
+        padding-left: 18px;
+    }
+    &-price {
+        text-align: left;
+        color: $colorSecondary500;
+        @include text-normal(16px);
+        padding-left: 18px;
+        padding-bottom: 20px;
+    }
+    &-img {
+        background-color: $colorSecondary100;
+        align-self: center;
+        height: 420px;
+        text-align: center;
+    }
+}
+
+.shadow-img {
+    color: $colorPrimary100;
+    @include text-normal(14px);
+    border: 1px solid $colorPrimary100;
+    padding: 14px;
+    text-decoration: none;
+}

@@ -1,0 +1,200 @@
+@import 'vars';
+@import 'mixins';
+.cart-block {
+    padding: 96px 0 128px 0;
+    display: flex;
+    justify-content: space-between;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__item {
+        display: flex;
+        width: 652px;
+        height: 306px;
+        border: 1px solid transparent;
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+        position: relative;
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1);
+        &:hover {
+            transform: scale(1.02);
+        }
+        &_close {
+            position: absolute;
+            top: 32px;
+            right: 27px;
+        }
+    }
+    &__image {
+        width: 262px;
+        @include d-flex-center(center);
+        & img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 22px 97px 0 31px;
+        gap: 6px
+    }
+    &__heading {
+        color: $colorPrimary800;
+        @include text-normal(24px);
+        margin-bottom: 36px;
+    }
+    &__text {
+        @include text-normal(22px);
+        color: $colorPrimary500;
+        &_quantity {
+            display: flex;
+            align-items: baseline;
+            & input {
+                // align-self: baseline;
+                width: 45px;
+                @include text-normal(18px);
+                text-align: center;
+                color: $colorPrimary400;
+                border: 1px solid #EAEAEA;
+                margin-left: 24px;
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__buttons {
+        margin-top: 32px;
+        @include d-flex-center(space-between);
+    }
+    &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        width: 360px;
+        height: 272px;
+        margin-bottom: 57px;
+        &_title {
+            @include text-thin(16px);
+            color: $colorPrimary800;
+        }
+        & input {
+            border: 1px solid #A4A4A4;
+            color: #B1B1B1 !important;
+            @include text-thin(13px);
+            padding: 13px 16px;
+        }
+        & a {
+            width: fit-content;
+            @include text-thin(11px);
+            padding: 11px 14px;
+        }
+    }
+    &__checkout {
+        height: 214px;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        background-color: #F5F3F3;
+        padding: 43px;
+        align-items: end;
+        & p {
+            margin-bottom: 12px;
+            color: #4A4A4A;
+            @include text-normal(11px);
+        }
+        & h5 {
+            margin-bottom: 21px;
+            color: $colorPrimary800;
+            @include text-thin(16px)
+        }
+        & .pink {
+            font-weight: 700;
+        }
+        & a {
+            color: $colorPrimary100;
+            background-color: $colorSecondary500;
+            @include text-thin(16px);
+            &:hover {
+                color: $colorSecondary500;
+                background-color: $colorPrimary100;
+            }
+        }
+    }
+}
+
+@media (max-width: 1144px) and (min-width: 768px) {
+    .cart-block {
+        padding-left: 16px;
+        padding-right: 16px;
+        flex-direction: column;
+        &__item {
+            width: 100%;
+        }
+        &__items {
+            align-items: center;
+        }
+        &__buttons {
+            gap: 48px;
+            margin-top: 22px;
+        }
+        &__deliver {
+            margin-top: 64px;
+            margin-bottom: 12px;
+            @include d-flex-center(center);
+            gap: 15px;
+        }
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .cart-block {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 96px;
+        flex-direction: column;
+        &__items {
+            align-items: center;
+        }
+        &__item {
+            height: 188px;
+            width: 100%;
+        }
+        &__image {
+            width: 144px;
+        }
+        &__info {
+            gap: 4px;
+        }
+        &__heading {
+            font-size: 16px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+        &__text_quantity input {
+            font-size: 14px;
+        }
+        &__buttons {
+            gap: 18px;
+            margin-top: -10px;
+        }
+        &__deliver {
+            margin-top: 40px;
+            @include d-flex-center(center);
+            flex-direction: column;
+            gap: 48px;
+        }
+        &__address {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        &__checkout {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+/* colors */
+
+
+/* Primary */
+
+$colorPrimary100: #F8F8F8;
+$colorPrimary200: rgba(244, 244, 244, 0.70);
+$colorPrimary300: #6F6E6E;
+$colorPrimary400: #636363;
+$colorPrimary500: #5E5E5E;
+$colorPrimary600: #5D5D5D;
+$colorPrimary700: #4D4D4D;
+$colorPrimary800: #222;
+$colorPrimary900: #000;
+
+/* Secondary */
+
+$colorSecondary100: #F1E4E6;
+$colorSecondary200: #F7E4E2;
+$colorSecondary500: #F16D7F;
+$colorSecondary600: #E05C6E;
+$colorSecondary700: #EF5B70;
+
+/* */
+
+$displayWidth: 1140px;
+$dropMenuMaxWidth: calc($displayWidth + 360px)

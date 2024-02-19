@@ -1,0 +1,179 @@
+@import 'vars';
+@import 'mixins';
+.main-product {
+    background-color: $colorSecondary100;
+    height: 150px
+}
+
+.top {
+    height: 100%;
+    @include d-flex-center(space-between);
+    &-left {
+        @include text-normal(24px);
+        color: $colorSecondary500;
+    }
+    &-right {
+        display: flex;
+    }
+}
+
+.breadcrumb {
+    @include text-thin(14px);
+    color: $colorPrimary400;
+    &:last-child {
+        color: $colorSecondary500;
+        @include text-wider(14px);
+    }
+    &:not(:last-child)::after {
+        content: "/";
+        padding: 0 6px;
+    }
+}
+
+.adv-window {
+    width: 100%;
+    overflow: hidden;
+    height: 780px;
+    position: relative;
+    &-arrow-left {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 16px);
+        z-index: 2;
+        cursor: pointer;
+    }
+    &-arrow-right {
+        position: absolute;
+        right: 0;
+        top: calc(50% - 16px);
+        z-index: 2;
+        cursor: pointer;
+    }
+}
+
+.slider {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: all 1s;
+    &-frame {
+        height: 100%;
+        width: 100%;
+        display: none;
+        justify-content: center;
+        background-color: #f3eeee;
+    }
+    &-back {
+        background-color: $colorPrimary200;
+    }
+    // &:hover {
+    //     transform: translateX(100%);
+    // }
+    &-image {
+        height: 100%;
+    }
+    &-previous {
+        position: absolute;
+        display: flex;
+        right: 100%;
+    }
+    &-current {
+        position: absolute;
+        display: flex;
+    }
+    &-next {
+        position: absolute;
+        display: flex;
+        left: 100%;
+    }
+}
+
+.buy-now {
+    @include d-flex-center(center);
+    background-color: #fff;
+    flex-direction: column;
+    margin-bottom: 174px;
+    &-collection {
+        padding-top: 65px;
+        @include text-thin(14px);
+        color: $colorSecondary500;
+        // padding-bottom: 12px;
+    }
+    &-divider {
+        padding-bottom: 12px;
+    }
+    &-header {
+        padding-bottom: 48px;
+        @include text-thin(18px)
+    }
+    &-description {
+        padding-bottom: 33px;
+        @include text-thin(14px);
+        max-width: 555px;
+        text-align: center;
+    }
+    &-price {
+        padding-bottom: 130px;
+        @include text-thin(24px);
+        color: $colorSecondary700;
+    }
+    &-parameters {
+        text-decoration: none;
+        padding-bottom: 64px;
+        @include text-normal(14px);
+        color: $colorPrimary300;
+        @include d-flex-center(space-between);
+        gap: 45px;
+    }
+    &-summary {
+        @include d-flex-center(flex-start);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1144px) and (min-width: 768px) {
+    .top {
+        padding: 0 16px;
+    }
+    .adv-window {
+        height: 624px;
+    }
+    .slider {
+        &-frame {
+            padding: 30px 0;
+        }
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .top {
+        flex-direction: column;
+        &-left {
+            margin-top: 24px;
+        }
+        &-right {
+            margin-bottom: 46px;
+        }
+    }
+    .buy-now {
+        padding: 0 24px;
+        &-header {
+            padding-bottom: 32px;
+        }
+        &-price {
+            padding-bottom: 82px;
+        }
+        &-summary {
+            font-size: 10px;
+        }
+    }
+    .adv-window {
+        height: 624px;
+    }
+    .slider {
+        &-frame {
+            padding: 85px 0;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import 'vars';
+@mixin d-flex-center($position) {
+    display: flex;
+    align-items: center;
+    justify-content: $position;
+}
+
+
+/* tipography */
+
+@mixin text-normal ($size) {
+    font-size: $size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@mixin text-thin ($size) {
+    font-size: $size;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+@mixin text-wider ($size) {
+    font-size: $size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@mixin text-wide ($size) {
+    font-size: $size;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}

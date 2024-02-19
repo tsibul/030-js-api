@@ -1,0 +1,103 @@
+@import 'vars';
+@import 'mixins';
+.subscribe {
+    background-image: url(image/photo_subscribe.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    height: 450px;
+    &-block {
+        height: 100%;
+        @include d-flex-center(space-between);
+    }
+    &-info {
+        max-width: 360px;
+        @include d-flex-center(center);
+        flex-direction: column;
+    }
+    &-muzzle-text {
+        color: $colorPrimary800;
+        text-align: center;
+        @include text-normal(20px);
+    }
+    &-form {
+        @include d-flex-center(center);
+        flex-direction: column;
+        flex-grow: 0.75;
+    }
+    &-header {
+        color: $colorPrimary800;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 167.2%;
+    }
+    &-text {
+        color: $colorPrimary800;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 167.2%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &-input-block {
+        display: flex;
+        justify-content: center;
+        height: 49px;
+        &-input {
+            width: 260px;
+            height: 100%;
+            border: 1px solid transparent;
+            border-radius: 24px 0 0 24px;
+            background-color: #E1E1E1;
+            &::placeholder {
+                color: $colorPrimary800;
+                @include text-normal(14px);
+                opacity: 0.671;
+                padding-left: 22px;
+            }
+        }
+        &-button {
+            width: 100px;
+            height: 100%;
+            background-color: $colorSecondary500;
+            border: 1px solid transparent;
+            border-radius: 0 24px 24px 0;
+            color: $colorPrimary100;
+            @include text-normal(14px);
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+        display: flex;
+        align-items: center;
+    }
+    &-right {
+        display: flex;
+    }
+    &-text {
+        color: $colorPrimary100;
+        @include text-normal(16px);
+    }
+    &-icon {
+        display: block;
+        margin: 24px 0 24px 7.3px;
+        background-color: $colorPrimary100;
+        height: 32px;
+        width: 32px;
+        transition: all 0.3s ease;
+        &:hover svg path {
+            fill: $colorPrimary100;
+        }
+        &:hover {
+            background-color: $colorSecondary500;
+        }
+    }
+}

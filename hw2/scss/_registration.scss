@@ -1,0 +1,122 @@
+@import 'vars';
+@import 'mixins';
+.registration-block {
+    display: flex;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    justify-content: space-between;
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+    &__perks {
+        display: flex;
+        flex-direction: column;
+        // width: 652px;
+        @include text-thin(24px);
+        color: #000;
+        height: 334px;
+        gap: 21px;
+        margin-left: 22px;
+        & h3 {
+            @include text-thin(24px);
+        }
+        & ul {
+            list-style-image: url('image/icon/ok.svg');
+            padding-left: 32px;
+        }
+        & li {
+            padding: 0 0 16px 22px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 360px;
+    }
+    &__info a {
+        display: block;
+        color: $colorPrimary100;
+        background-color: $colorSecondary500;
+        &:hover {
+            color: $colorSecondary500;
+            background-color: transparent;
+        }
+    }
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        width: 100%;
+        & input {
+            border: 1px solid #A4A4A4;
+            color: $colorPrimary800;
+            @include text-thin(13px);
+            padding: 13px 16px;
+            &::placeholder {
+                color: #B1B1B1;
+                @include text-thin(13px);
+            }
+        }
+        & p {
+            @include text-thin(16px);
+        }
+    }
+    &__radio {
+        display: flex;
+        gap: 10px;
+        @include text-thin(11px);
+        color: $colorPrimary900;
+        margin-bottom: 33px;
+        &_gap {
+            margin-left: 10px;
+        }
+        & input:checked {
+            accent-color: $colorPrimary500;
+        }
+    }
+    &__text {
+        margin-top: 15px;
+        margin-bottom: 40px;
+        @include text-thin(13px);
+        color: #B1B1B1;
+    }
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 1144px) and (min-width: 768px) {
+    .registration-block {
+        // align-items: center;
+        padding: 40px 16px;
+        &__info {
+            width: 360px;
+        }
+        &__perks {
+            width: auto;
+            margin-left: 22px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .registration-block {
+        // width: 360px;
+        padding: 40px 8px;
+        flex-direction: column;
+        &__perks {
+            font-size: 16px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+    }
+    .top-left__registration {
+        padding-top: 36px;
+    }
+}
